@@ -69,7 +69,7 @@ namespace ApplicationTask_70_483_chapter1_task2_
                         rez += 50;
                     }
                 }
-                Console.WriteLine("Имя:{0}  Позиция:{1}  Оценка:{2}/300", studCards[i, 0], i, rez);
+                Console.WriteLine("Имя:{0}  Позиция:{1}  Оценка:{2}/300", studCards[i, 0], ++i, rez);
             }
 
         }
