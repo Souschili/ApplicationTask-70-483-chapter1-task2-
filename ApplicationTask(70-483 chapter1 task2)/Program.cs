@@ -53,13 +53,13 @@ namespace ApplicationTask_70_483_chapter1_task2_
             //Вывод карточек
             Console.WriteLine("*****************Отчетная карта******************");
             //Student Name: Ali Asad, Position: 1, Total: 160/300
-            for(int i=0;i<stCount;i++)
+            for(int i=0,pos=1;i<stCount;i++,pos++)
             {
                 int rez = 0;
                 for(int j=1;j<4 ;j++)
                 {
                     int mark;
-                    if(Int32.TryParse(studCards[i,j],out mark))
+                    if(Int32.TryParse(studCards[i,j],out mark) && mark>=0 && mark<=100)
                     {
                         rez += mark;
                     }
@@ -69,7 +69,7 @@ namespace ApplicationTask_70_483_chapter1_task2_
                         rez += 50;
                     }
                 }
-                Console.WriteLine("Имя:{0}  Позиция:{1}  Оценка:{2}/300", studCards[i, 0], ++i, rez);
+                Console.WriteLine("Имя:{0}  Позиция:{1}  Оценка:{2}/300", studCards[i, 0], pos, rez);
             }
 
         }
